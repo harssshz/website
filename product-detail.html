@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Left: Images -->
+    <div class="flex gap-4">
+      <!-- Thumbnail list -->
+      <div class="flex flex-col gap-4">
+        <img src="IMG_8687.PNG" alt="boy" class="w-20 h-20 object-cover rounded border cursor-pointer" onclick="changeMainImage(this.src)">
+        <img src="IMG_8686.PNG" alt="boy" class="w-20 h-20 object-cover rounded border cursor-pointer" onclick="changeMainImage(this.src)">
+        <img src="IMG_8688.PNG" alt="boy" class="w-20 h-20 object-cover rounded border cursor-pointer" onclick="changeMainImage(this.src)">
+      </div>
+
+      <!-- Main image -->
+      <div class="flex-1">
+        <img id="mainImage" src="IMG_8687.PNG" class="w-full h-full object-contain rounded shadow" />
+      </div>
+    </div>
+
+    <!-- Right: Details -->
+    <div>
+      <h1 class="text-2xl font-bold mb-2">Urban Bloom – Capturing the contrast between raw urban settings and soft floral designs.</h1>
+      <div class="flex items-center text-yellow-400 mb-2">
+        ★★★★☆ <span class="text-sm text-gray-600 ml-2">(4.8)</span>
+      </div>
+      <p class="text-2xl font-semibold mb-4">799</p>
+      <p class="text-sm text-gray-600 mb-6">
+        Urban Bloom effortlessly combines the edgy vibes of urban settings with delicate floral designs. Embrace the contrast with this unique and stylish fashion statement.
+        </p>
+
+      <!-- Size Selection -->
+      <div class="mb-6">
+        <label class="block font-semibold mb-2">Select Size</label>
+        <div class="flex gap-2">
+          <button class="border px-4 py-1 rounded hover:bg-gray-100">S</button>
+          <button class="border px-4 py-1 rounded hover:bg-gray-100">M</button>
+          <button class="border px-4 py-1 rounded hover:bg-gray-100">L</button>
+          <button class="border px-4 py-1 rounded hover:bg-gray-100">XL</button>
+      </div>
+      </div>
+
+  
+      <!-- Add to Cart -->
+       <div class="mb-6">
+      <button class="w-full bg-black text-white py-3 rounded hover:bg-gray-800 mb-4">Add to Cart</button>
+      </div>
+
+      <p class="text-sm text-gray-600">
+        ✅ 100% Original Product. <br />
+        🔁 Easy return and exchange within 14 days.
+      </p>
+
+  <script>
+    function changeMainImage(src) {
+      document.getElementById("mainImage").src = src;
+    }
+  </script>
+</body>
+</html>
