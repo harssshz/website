@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OLD ETHICS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom fonts and weights for the site */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      margin: 0;
+      padding: 0;
+    }
+    /* Hide scrollbars in carousel */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Custom arrows for hero carousel */
+    .arrow-bg {
+      background-color: #f3f4f6; /* Tailwind gray-100 */
+    }
+    /* Product price */
+    .price {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #1f2937; /* gray-800 */
+    }
+    /* Star rating for products */
+    .stars {
+      color: #fbbf24; /* yellow-400 for stars */
+    }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- NAV & HEADER -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <ul class="flex space-x-8 text-sm font-semibold text-gray-700">
+        <li class="cursor-pointer">
+            <a href="#home" class="flex items-center hover:text-gray-900">
+          Home
+          <svg class="inline ml-1 h-3 w-3 fill-current" viewBox="0 0 20 20"><path d="M5.5 7.5L10 12l4.5-4.5H5.5z"/></svg>
+          <!-- Dropdown placeholder (not functional for demo) -->
+        </a>
+        </li>
+       <li class="cursor-pointer">
+          <a href="#Shop" class="flex items-center hover:text-gray-900">
+            Shop
+               <svg class="inline ml-1 h-3 w-3 fill-current" viewBox="0 0 20 20">
+                       <path d="M5.5 7.5L10 12l4.5-4.5H5.5z" />
+                            </svg>
+                                </a>
+                                    </li>
+        <li class="cursor-pointer">
+          <a href="#contact" class="hover:text-gray-900">Contact Us</a>
+          </li>
+      </ul>
+      <a href="#" class="flex justify-center">
+  <img src="logo.png"Logo" alt="logo" class="h-10 object-contain" />
+</a> 
+      </div>
+      <ul class="flex space-x-6 text-gray-500 text-xl">
+       <li>
+  <button id="toggleSearch" aria-label="Search">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+    </svg>
+  </button>
+</li>
+        <li><button aria-label="Account"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9.003 9.003 0 0112 15a9.003 9.003 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></button></li>
+        <li class="relative">
+          <button aria-label="Cart" class="relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h14l1-7H6.4m1.6 10a2 2 0 11-4 0 2 2 0 014 0zm10 0a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="absolute top-0 right-0 -mt-1 -mr-2 bg-black text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section id="home" class="relative h-[600px] max-w-7xl mx-auto mt-6 rounded overflow-hidden" aria-label="Featured products slider">
+  <!-- Slides container -->
+  <div id="slider" class="relative h-full w-full">
+    <!-- Slide 1 -->
+    <div class="slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10">
+      <img src="BANNER.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="relative z-10 h-full flex flex-col justify-center px-12 text-white">
+        <span class="uppercase tracking-widest text-sm mb-2 font-semibold opacity-80">Urban Edge</span>
+        <h2 class="text-5xl font-extrabold leading-tight max-w-lg mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Shop Our<br />TIMELESS Collection</h2>
+        <button class="bg-white text-blue-900 font-semibold rounded-md py-3 px-6 w-fit shadow-lg hover:bg-gray-200 transition">Discover Now</button>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+      <img src="BANNER.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 bg-gradient-to-r from-pink-900 via-pink-700/70 to-transparent"></div>
+      <div class="relative z-10 h-full flex flex-col justify-center px-12 text-white">
+        <span class="uppercase tracking-widest text-sm mb-2 font-semibold opacity-80">Chic Comfort</span>
+        <h2 class="text-5xl font-extrabold leading-tight max-w-lg mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Sweaters with<br />Style & Warmth</h2>
+        <button class="bg-white text-pink-900 font-semibold rounded-md py-3 px-6 w-fit shadow-lg hover:bg-gray-200 transition">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+      <img src="BANNER.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black via-gray-800/70 to-transparent"></div>
+      <div class="relative z-10 h-full flex flex-col justify-center px-12 text-white">
+        <span class="uppercase tracking-widest text-sm mb-2 font-semibold opacity-80">Classic Appeal</span>
+        <h2 class="text-5xl font-extrabold leading-tight max-w-lg mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Timeless Shoes<br />Every Season</h2>
+        <button class="bg-white text-gray-900 font-semibold rounded-md py-3 px-6 w-fit shadow-lg hover:bg-gray-200 transition">Explore</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button aria-label="Previous slide" id="prevSlide" class="absolute top-1/2 left-10 -translate-y-1/2 z-20 rounded-full bg-transparent border-white w-12 h-12 flex items-center justify-center hover:bg-white hover:bg-opacity-20 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-blue-900" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6" />
+    </svg>
+  </button>
+ <button aria-label="Next slide" id="nextSlide" class="absolute top-1/2 right-10 -translate-y-1/2 z-20 rounded-full bg-transparent border-white w-12 h-12 flex items-center justify-center hover:bg-white hover:bg-opacity-20 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-blue-900" fill="none" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
+    </svg>
+  </button>
+</section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="max-w-7xl mx-auto my-16 px-6" id="Shop">
+    <h3 class="text-3xl font-semibold text-center mb-10">New Arrivals</h3>
+    <nav class="flex justify-center space-x-12 mb-12 text-sm font-semibold text-gray-400 uppercase tracking-wider">
+      <button class="text-gray-900 hover:text-gray-700 cursor-pointer">Collection</button>
+    </nav>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Product Card 1 -->
+        <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+     <a href="product-detail.html" target="_blank" class="bg-gray-50 p-4 rounded shadow-sm flex flex-col cursor-pointer">
+        <img src="IMG_8687.PNG" alt="oversized" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Men</span>
+        <p class="text-sm font-semibold mb-1">Urban Bloom – Capturing the contrast between raw urban settings and soft floral designs.</p>
+        <p class="price">₹799</p>
+        </a>
+      </div>
+     
+      <!-- Product Card 2 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+         <a href="product-detail2.html" target="_blank" class="bg-gray-50 p-4 rounded shadow-sm flex flex-col cursor-pointer">
+        <img src="IMG_8873.jpg" alt="oversized" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Men</span>
+        <p class="text-sm font-semibold mb-1">“Gotham Guardian Oversized Tee – Limited Drop”</p>
+        <p class="price">₹749</p>
+        </a>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/adidas-x-pop-beckenbauer-track-jacket-navy-4_300x.jpg?v=1667417225" alt="adidas X Pop Beckenbauer Track Jacket" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">adidas X Pop Beckenbauer Track Jacket</p>
+        <p class="price flex items-center gap-2">0000 <span class="stars">★★★★★</span></p>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/adidas-x-pop-classic-tshirt-grey-navy-1_300x.jpg?v=1667418684" alt="adidas X Pop Classic t-shirt" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">adidas X Pop Classic t-shirt, grey / navy</p>
+        <p class="price">0000</p>
+      </div>
+
+      <!-- Product Card 5 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/adidas-x-pop-sl-cap-navy-white-3_300x.jpg?v=1667417707" alt="adidas X Pop SL Cap" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">adidas X Pop SL Cap, navy / white</p>
+        <p class="price">0000</p>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/butter-yard-pullover-hood-denim-1_300x.jpg?v=1662643767" alt="Butter Yard Pullover Hood" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">Butter Yard Pullover Hood, denim</p>
+        <p class="price">0000</p>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/parra-rug-pull-tshirt-white-1_300x.jpg?v=1667398792" alt="Parra Rug Pull t-shirt" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">Parra Rug Pull t-shirt, white</p>
+        <p class="price">00000</p>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="bg-gray-50 p-4 rounded shadow-sm flex flex-col">
+        <img src="https://cdn.shopify.com/s/files/1/0071/8624/8291/products/carhartt-ls-dead-kebab-knock-knock-sweat-white-4_300x.jpg?v=1667417016" alt="Carhartt LS DeadKebab Sweat" class="w-full object-contain mb-4 h-48"/>
+        <span class="uppercase text-xs tracking-wider text-gray-500 mb-0.5">Women</span>
+        <p class="text-sm font-semibold mb-1">Carhartt LS DeadKebab Knock Knock Sweat</p>
+        <p class="price">0000</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  const slides = document.querySelectorAll(".slide");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("opacity-100", "z-10");
+      slide.classList.add("opacity-0", "z-0");
+      if (i === index) {
+        slide.classList.remove("opacity-0", "z-0");
+        slide.classList.add("opacity-100", "z-10");
+      }
+    });
+  }
+
+  document.getElementById("nextSlide").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  document.getElementById("prevSlide").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 6000);
+  
+  function openProductModal() {
+    document.getElementById('productModal').classList.remove('hidden');
+  }
+
+  function closeProductModal() {
+    document.getElementById('productModal').classList.add('hidden');
+  }
+
+</script>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-gray-900 text-white py-4 mt-16">
+  <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-6 ">
+    
+    <!-- About -->
+    <div>
+      <h4 class="text-base font-semibold mb-2">OLD ETHICS</h4>
+      <p class="text-sm text-gray-400">Quality fashion made timeless. Explore our collections made for you.</p>
+    </div>
+    
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-base font-semibold mb-2">Quick Links</h4>
+      <ul class="space-y-1 text-sm text-gray-400">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#Shop" class="hover:text-white">Shop</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div>
+      <h4 class="text-base font-semibold mb-2">Legal</h4>
+      <ul class="space-y-1 text-sm text-gray-400">
+        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h4 class="text-base font-semibold mb-2">Follow Us</h4>
+      <div class="flex space-x-4 text-gray-400">
+        <a href="#" class="hover:text-white" aria-label="Facebook">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.85 7.94 9.8v-6.93H7.1v-2.87h2.84V9.84c0-2.8 1.66-4.34 4.22-4.34 1.22 0 2.5.22 2.5.22v2.75h-1.41c-1.39 0-1.82.87-1.82 1.76v2.12h3.1l-.5 2.87h-2.6v6.93C18.56 20.85 22 16.84 22 12z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/oldethics.in?igsh=MWswenFvb292Zm1oag==" class="hover:text-white" aria-label="Instagram">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2C5.13 2 3 4.13 3 6.75v10.5C3 19.87 5.13 22 7.75 22h8.5C18.87 22 21 19.87 21 17.25V6.75C21 4.13 18.87 2 16.25 2h-8.5zM12 8.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zm6.25-.25a.75.75 0 110 1.5.75.75 0 010-1.5zM12 10a2 2 0 100 4 2 2 0 000-4z"/></svg>
+        </a>
+        <a href="#" class="hover:text-white" aria-label="Twitter">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.34-1.6.57-2.46.68a4.25 4.25 0 001.88-2.35 8.43 8.43 0 01-2.69 1.03 4.22 4.22 0 00-7.2 3.85 12.01 12.01 0 01-8.73-4.42 4.22 4.22 0 001.31 5.63A4.2 4.2 0 013 9.74v.05a4.22 4.22 0 003.39 4.13 4.25 4.25 0 01-1.9.07 4.23 4.23 0 003.94 2.92 8.47 8.47 0 01-5.24 1.81A8.63 8.63 0 012 19.54a11.93 11.93 0 006.29 1.84c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.36 8.36 0 0022.46 6z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center text-gray-500 mt-4 text-xs">
+    &copy; 2025 OLD ETHICS. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
+
